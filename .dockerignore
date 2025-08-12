@@ -1,0 +1,8 @@
+.git
+.gitignore
+.vscode
+__pycache__
+*.pyc
+db.sqlite3
+media/
+staticfiles_build/
