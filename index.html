@@ -14,8 +14,8 @@
         body { font-family: 'Inter', sans-serif; background-color: #f3f4f6; }
         .hero-bg { background: linear-gradient(rgba(29, 39, 59, 0.7), rgba(29, 39, 59, 0.7)), url(https://storage.googleapis.com/gemini-prod-us-west1-409905722214-us-west1-b/images/569055e8-5804-4530-80c1-2f77174d8253.jpg); background-size: cover; background-position: center; }
         .tab-button.active { border-color: #4f46e5; color: #4f46e5; background-color: #eef2ff; }
-        .tab-content, #application-modal, #admin-panel { display: none; }
-        .tab-content.active, #application-modal.active, #admin-panel.active { display: block; }
+        .tab-content, #admin-panel, #application-modal, #admin-login-modal { display: none; }
+        .tab-content.active, #admin-panel.active, #application-modal.active, #admin-login-modal.active { display: flex; }
         .modal-overlay { background-color: rgba(0,0,0,0.5); }
         .status-pending { background-color: #fef3c7; color: #92400e; }
         .status-approved { background-color: #d1fae5; color: #065f46; }
@@ -97,6 +97,21 @@
                     </tbody>
                 </table>
             </div>
+        </div>
+    </div>
+
+    <!-- Admin Login Modal -->
+    <div id="admin-login-modal" class="fixed inset-0 z-50 items-center justify-center">
+        <div class="modal-overlay fixed inset-0"></div>
+        <div class="bg-white rounded-lg shadow-2xl p-8 w-full max-w-sm mx-auto relative mt-16">
+            <button id="close-login-modal-btn" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-3xl" aria-label="Close login form">&times;</button>
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Admin Login</h2>
+            <form id="admin-login-form" class="space-y-4">
+                <div><label for="admin-username" class="block text-sm font-medium text-gray-700">Username</label><input type="text" id="admin-username" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"></div>
+                <div><label for="admin-password" class="block text-sm font-medium text-gray-700">Password</label><input type="password" id="admin-password" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"></div>
+                <button type="submit" class="w-full bg-indigo-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-indigo-700">Login</button>
+                <div id="login-error-message" class="hidden text-center text-red-600 font-semibold pt-2"></div>
+            </form>
         </div>
     </div>
 
