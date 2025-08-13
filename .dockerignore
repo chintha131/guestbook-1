@@ -1,8 +1,6 @@
+# Ignore version control files
 .git
 .gitignore
-.vscode
-__pycache__
-*.pyc
-db.sqlite3
-media/
-staticfiles_build/
+
+# Ignore IDE and local configuration
+.vscode/
