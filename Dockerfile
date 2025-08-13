@@ -1,21 +1,12 @@
-# Best Practice: Use a specific version tag for reproducibility.
-FROM nginx:1.25.3-alpine
+# Use an official lightweight Nginx image as a parent image
+FROM nginx:alpine
 
-# Best Practice: Run as a non-root user for security.
-# Create a user and group.
-RUN addgroup -S appgroup && adduser -S -G appgroup appuser
+# Set the working directory to the Nginx web root
+WORKDIR /usr/share/nginx/html
 
-# Switch to the non-root user.
-USER appuser
+# Copy the local `index.html` and `main.js` files to the container's web root
+COPY ./index.html .
+COPY ./main.js .
 
-# Copy your static HTML file to the Nginx web root directory.
-# This is where Nginx looks for files to serve.
-COPY index.html /usr/share/nginx/html/
-
-# Expose port 80 for the web server (Nginx's default port).
-# Cloud Run will automatically map its internal PORT environment variable to this.
+# Inform Docker that the container listens on port 80 at runtime
 EXPOSE 80
-
-# The base Nginx image already has a command to start the server,
-# so we don't need to specify one.
-# CMD ["nginx", "-g", "daemon off;"]
