@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Guestbook with Cloud Code
 
 The Guestbook sample demonstrates how to deploy a Kubernetes application with a front end service and a back end service using the Cloud Code IDE extension.  
@@ -70,3 +71,6 @@ The Cloud Code team is inviting our user community to sign-up to participate in 
 If you’re invited to join a study, you may try out a new product or tell us what you think about the products you use every day. At this time, Google is only sending invitations for upcoming remote studies. Once a study is complete, you’ll receive a token of thanks for your participation such as a gift card or some Google swag. 
 
 [Sign up using this link](https://google.qualtrics.com/jfe/form/SV_4Me7SiMewdvVYhL?reserved=1&utm_source=In-product&Q_Language=en&utm_medium=own_prd&utm_campaign=Q1&productTag=clou&campaignDate=January2021&referral_code=UXbT481079) and answer a few questions about yourself, as this will help our research team match you to studies that are a great fit.
+=======
+git remote set-url origin https://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@github.com/chinnabujji/guestbook-1.git
+>>>>>>> 5496d8115c5c29a1bdbd8e9770a09bf831376e67
