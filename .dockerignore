@@ -1,6 +1,7 @@
-# Ignore version control files
+# Git and repository files
 .git
 .gitignore
 
-# Ignore IDE and local configuration
+# IDE and tool-specific folders
 .vscode/
+.qodo/
